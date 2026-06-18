@@ -407,3 +407,477 @@ status
 created_at
 
 updated_at
+
+# Transaction Tables
+
+---
+
+## 11. Customers
+
+Purpose
+
+Stores customer information for loyalty, analytics and AI.
+
+Primary Key
+
+customer_id
+
+Foreign Key
+
+restaurant_id
+
+Columns
+
+| Column | Type |
+|----------|----------|
+| customer_id | INTEGER |
+| restaurant_id | INTEGER |
+| first_name | VARCHAR(100) |
+| last_name | VARCHAR(100) |
+| email | VARCHAR(200) |
+| phone | VARCHAR(30) |
+| gender | VARCHAR(20) |
+| dob | DATE |
+| loyalty_points | INTEGER |
+| vip_status | BOOLEAN |
+| join_date | DATE |
+| last_visit | DATE |
+| status | VARCHAR(20) |
+| created_at | TIMESTAMP |
+| updated_at | TIMESTAMP |
+
+---
+
+## 12. Orders
+
+Purpose
+
+Stores every customer order.
+
+Primary Key
+
+order_id
+
+Foreign Keys
+
+restaurant_id
+
+customer_id
+
+user_id
+
+Columns
+
+| Column | Type |
+|----------|----------|
+| order_id | BIGINT |
+| restaurant_id | INTEGER |
+| customer_id | INTEGER |
+| user_id | INTEGER |
+| order_datetime | TIMESTAMP |
+| order_type | VARCHAR(30) |
+| order_status | VARCHAR(30) |
+| subtotal | DECIMAL |
+| discount | DECIMAL |
+| tax | DECIMAL |
+| total_amount | DECIMAL |
+| payment_status | VARCHAR(30) |
+| created_at | TIMESTAMP |
+| updated_at | TIMESTAMP |
+
+---
+
+## 13. Order Items
+
+Purpose
+
+Stores products inside each order.
+
+Primary Key
+
+order_item_id
+
+Foreign Keys
+
+order_id
+
+menu_item_id
+
+Columns
+
+| Column | Type |
+|----------|----------|
+| order_item_id | BIGINT |
+| order_id | BIGINT |
+| menu_item_id | INTEGER |
+| quantity | INTEGER |
+| unit_price | DECIMAL |
+| total_price | DECIMAL |
+
+---
+
+## 14. Sales
+
+Purpose
+
+Completed payments.
+
+Primary Key
+
+sale_id
+
+Foreign Key
+
+order_id
+
+Columns
+
+| Column | Type |
+|----------|----------|
+| sale_id | BIGINT |
+| order_id | BIGINT |
+| sale_datetime | TIMESTAMP |
+| gross_sales | DECIMAL |
+| tax_amount | DECIMAL |
+| discount_amount | DECIMAL |
+| net_sales | DECIMAL |
+
+---
+
+## 15. Payments
+
+Purpose
+
+Payment details.
+
+Primary Key
+
+payment_id
+
+Foreign Keys
+
+sale_id
+
+machine_id
+
+Columns
+
+payment_id
+
+sale_id
+
+machine_id
+
+payment_method
+
+transaction_reference
+
+payment_status
+
+payment_datetime
+
+amount
+
+---
+
+## 16. Deliveries
+
+Purpose
+
+Delivery information.
+
+Primary Key
+
+delivery_id
+
+Foreign Key
+
+order_id
+
+Columns
+
+delivery_id
+
+order_id
+
+delivery_partner
+
+delivery_status
+
+delivery_distance
+
+estimated_minutes
+
+actual_minutes
+
+delivery_charge
+
+created_at
+
+updated_at
+
+---
+
+## 17. Expenses
+
+Purpose
+
+Restaurant operating expenses.
+
+Primary Key
+
+expense_id
+
+Foreign Keys
+
+restaurant_id
+
+user_id
+
+Columns
+
+expense_id
+
+restaurant_id
+
+user_id
+
+expense_category
+
+expense_date
+
+amount
+
+payment_method
+
+description
+
+status
+
+created_at
+
+updated_at
+
+---
+
+## 18. CashUp
+
+Purpose
+
+Daily cash reconciliation.
+
+Primary Key
+
+cashup_id
+
+Foreign Keys
+
+restaurant_id
+
+user_id
+
+Columns
+
+cashup_id
+
+restaurant_id
+
+user_id
+
+business_date
+
+opening_cash
+
+cash_sales
+
+card_sales
+
+upi_sales
+
+refund_amount
+
+expense_amount
+
+closing_cash
+
+variance
+
+status
+
+created_at
+
+updated_at
+
+---
+
+## 19. CashUp Notes
+
+Purpose
+
+Manager notes.
+
+Primary Key
+
+note_id
+
+Foreign Key
+
+cashup_id
+
+Columns
+
+note_id
+
+cashup_id
+
+note
+
+created_by
+
+created_at
+
+---
+
+## 20. Cash & PDQ
+
+Purpose
+
+Daily payment reconciliation.
+
+Primary Key
+
+record_id
+
+Foreign Keys
+
+cashup_id
+
+machine_id
+
+Columns
+
+record_id
+
+cashup_id
+
+machine_id
+
+cash_amount
+
+card_amount
+
+upi_amount
+
+total_amount
+
+created_at
+
+---
+
+## 21. Banking
+
+Purpose
+
+Daily bank deposits.
+
+Primary Key
+
+banking_id
+
+Foreign Key
+
+restaurant_id
+
+Columns
+
+banking_id
+
+restaurant_id
+
+deposit_date
+
+bank_name
+
+account_number
+
+deposit_amount
+
+reference_number
+
+status
+
+created_at
+
+updated_at
+
+---
+
+## 22. TaxInfo
+
+Purpose
+
+Restaurant tax configuration.
+
+Primary Key
+
+tax_id
+
+Foreign Key
+
+restaurant_id
+
+Columns
+
+tax_id
+
+restaurant_id
+
+tax_name
+
+tax_percentage
+
+effective_from
+
+status
+
+created_at
+
+updated_at
+
+---
+
+## 23. WageAdvance
+
+Purpose
+
+Employee salary advances.
+
+Primary Key
+
+advance_id
+
+Foreign Key
+
+user_id
+
+Columns
+
+advance_id
+
+user_id
+
+request_date
+
+approved_date
+
+amount
+
+reason
+
+approved_by
+
+status
+
+created_at
+
+updated_at
