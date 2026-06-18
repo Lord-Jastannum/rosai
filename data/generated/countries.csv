@@ -1,0 +1,3 @@
+country_id,country_name,iso2,iso3,currency_code,currency_name,phone_code,timezone,language,status
+1,United Kingdom,GB,GBR,GBP,Pound Sterling,+44,Europe/London,English,Active
+2,India,IN,IND,INR,Indian Rupee,+91,Asia/Kolkata,English,Active

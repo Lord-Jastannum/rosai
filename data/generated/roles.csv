@@ -1,0 +1,15 @@
+id,department_id,name
+1,1,Admin
+2,2,Restaurant Manager
+3,2,Assistant Manager
+4,3,Head Chef
+5,3,Sous Chef
+6,3,Chef
+7,4,Waiter
+8,4,Cashier
+9,5,Accountant
+10,6,HR Manager
+11,7,Inventory Manager
+12,8,Purchase Manager
+13,9,Delivery Executive
+14,10,System Administrator

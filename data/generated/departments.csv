@@ -1,0 +1,11 @@
+id,name,status
+1,Administration,Active
+2,Operations,Active
+3,Kitchen,Active
+4,Service,Active
+5,Finance,Active
+6,Human Resources,Active
+7,Inventory,Active
+8,Procurement,Active
+9,Delivery,Active
+10,IT,Active

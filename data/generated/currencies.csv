@@ -1,0 +1,3 @@
+currency_id,currency_code,currency_name,symbol,country,status
+1,GBP,Pound Sterling,£,United Kingdom,Active
+2,INR,Indian Rupee,₹,India,Active
