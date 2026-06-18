@@ -1,6 +1,0 @@
-subscription_id,plan_name,monthly_price,currency,max_restaurants,max_users,support_level,analytics,ai_features,status
-1,Starter,29.0,GBP,1.0,10.0,Email,False,False,Active
-2,Growth,79.0,GBP,3.0,30.0,Priority Email,True,False,Active
-3,Professional,199.0,GBP,10.0,100.0,Phone,True,True,Active
-4,Enterprise,,GBP,,,Dedicated Manager,True,True,Custom
-5,Franchise,,GBP,,,Enterprise SLA,True,True,Custom
