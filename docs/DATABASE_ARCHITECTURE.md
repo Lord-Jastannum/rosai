@@ -881,3 +881,204 @@ status
 created_at
 
 updated_at
+
+# Entity Relationship Overview
+
+## Relationship Hierarchy
+
+Subscription
+    │
+    └── Client
+            │
+            ├── Primary Contact
+            │
+            └── Restaurant
+                    │
+                    ├── Users
+                    │      └── Wage Advance
+                    │
+                    ├── Customers
+                    │
+                    ├── PDQ Machines
+                    │
+                    ├── Menu Categories
+                    │      └── Menu Items
+                    │
+                    ├── Suppliers
+                    │      └── Inventory
+                    │
+                    ├── Orders
+                    │      ├── Order Items
+                    │      ├── Sales
+                    │      │      └── Payments
+                    │      └── Deliveries
+                    │
+                    ├── Expenses
+                    │
+                    ├── CashUp
+                    │      ├── CashUp Notes
+                    │      └── Cash & PDQ
+                    │
+                    ├── Banking
+                    │
+                    └── TaxInfo
+
+---
+
+# Generator Dependency
+
+01 Countries
+
+02 Currencies
+
+03 Departments
+
+04 Roles
+
+05 Subscriptions
+
+06 Clients
+
+07 Primary Contacts
+
+08 Restaurants
+
+09 Users
+
+10 PDQ Machines
+
+11 Customers
+
+12 Suppliers
+
+13 Inventory
+
+14 Menu Categories
+
+15 Menu Items
+
+16 Orders
+
+17 Order Items
+
+18 Sales
+
+19 Payments
+
+20 Deliveries
+
+21 Expenses
+
+22 CashUp
+
+23 CashUp Notes
+
+24 Cash & PDQ
+
+25 Banking
+
+26 TaxInfo
+
+27 Wage Advance
+
+---
+
+# AI Layer
+
+The AI layer never directly modifies operational tables.
+
+AI Components
+
+• Forecast Engine
+
+• Recommendation Engine
+
+• Restaurant Assistant
+
+• Finance Assistant
+
+• HR Assistant
+
+• Inventory Assistant
+
+• Executive Dashboard
+
+Future AI Tables
+
+forecasts
+
+recommendations
+
+embeddings
+
+conversation_history
+
+agent_memory
+
+predictions
+
+insights
+
+---
+
+# Development Roadmap
+
+Phase 1
+
+Synthetic Dataset
+
+Phase 2
+
+PostgreSQL
+
+Phase 3
+
+SQLAlchemy Models
+
+Phase 4
+
+FastAPI Backend
+
+Phase 5
+
+Authentication
+
+Phase 6
+
+React Dashboard
+
+Phase 7
+
+Analytics
+
+Phase 8
+
+AI Agents
+
+Phase 9
+
+Deployment
+
+---
+
+# Coding Standards
+
+• snake_case for all database columns
+
+• PascalCase for SQLAlchemy models
+
+• UUID support can be added later
+
+• Every table has created_at and updated_at
+
+• Soft delete preferred
+
+• Foreign keys enforced
+
+• No duplicate business IDs
+
+• Every generator must validate its output before saving
+
+---
+
+END OF DOCUMENT
