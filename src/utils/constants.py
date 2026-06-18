@@ -1,53 +1,15 @@
-"""
-Static lookup values used throughout the project.
-"""
+START_DATE = "2025-01-01"
 
-RESTAURANT_TYPES = [
-    "Fine Dining",
-    "Casual Dining",
-    "Cafe",
-    "Fast Food",
-    "Cloud Kitchen"
-]
+NUMBER_OF_DAYS = 30
 
-CUISINES = [
-    "Indian",
-    "Italian",
-    "Chinese",
-    "Mexican",
-    "Thai",
-    "British",
-    "American",
-    "Japanese"
-]
+CHUNK_SIZE = 5000
 
-ORDER_STATUS = [
-    "Completed",
-    "Cancelled",
-    "Refunded"
-]
+TAX_RATE = 0.05
 
-PAYMENT_METHODS = [
-    "Cash",
-    "Card",
-    "UPI",
-    "Online"
-]
+CURRENCY = {
 
-EMPLOYMENT_TYPES = [
-    "Full Time",
-    "Part Time"
-]
+    "United Kingdom":"GBP",
 
-SHIFT_TYPES = [
-    "Morning",
-    "Afternoon",
-    "Evening"
-]
+    "India":"INR"
 
-SUBSCRIPTION_TYPES = [
-    "Basic",
-    "Standard",
-    "Premium",
-    "Enterprise"
-]
+}
