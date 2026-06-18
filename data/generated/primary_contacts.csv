@@ -1,0 +1,31 @@
+id,client_id,first_name,last_name,designation,email,phone,alternate_phone,preferred_contact,verified,status,created_at,updated_at
+1,1,Fiona,Ali,Owner,harrietford@brown.com,+44(0)20 74960374,0113 496 0446,Email,True,Active,2026-06-18 12:00:51.466762,2026-06-18 12:00:51.466762
+2,2,Karen,Cooper,CEO,omason@ahmed-shaw.com,(01632)960286,01184960423,Email,True,Active,2026-06-18 12:00:51.466762,2026-06-18 12:00:51.466762
+3,3,Carolyn,Burns,Owner,kcartwright@rogers.com,(028) 9018825,02074960611,Email,False,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+4,4,Yashasvi,Madan,Owner,ekta87@ranganathan.com,2415398662,02796860452,Email,True,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+5,5,Glenn,Rogers,CEO,hilary98@price.info,+44(0)2074960444,029 2018 0285,Email,True,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+6,6,Geoffrey,Jones,Finance Director,derek27@turner-patel.biz,+44118 4960141,029 2018 0538,Email,False,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+7,7,Janani,Bora,CEO,ishwarrege@subramanian.com,+916994779539,08491735950,Phone,True,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+8,8,Zansi,Dhar,Owner,ladeesha@boase-verma.biz,4858180325,+917465150501,Email,False,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+9,9,Hemang,Nayar,Managing Director,riya77@shah.com,7519826535,07375393771,Phone,True,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+10,10,Leigh,Powell,CEO,craig72@singh-morris.biz,01184960198,0117 496 0545,Phone,True,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+11,11,Shaun,Ellis,Owner,brenda88@barnett.biz,+44191 4960389,0116 496 0679,Phone,True,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+12,12,Kimberley,Cox,Managing Director,zbell@long-fraser.co.uk,+44141 4960090,+44(0)115 496 0955,Phone,True,Active,2026-06-18 12:00:51.468667,2026-06-18 12:00:51.468667
+13,13,Meghana,Singhal,Owner,manan13@mohan.com,2791904190,3941330798,Phone,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+14,14,Joyce,Wheeler,Operations Manager,matthew37@young.info,+44(0)113 4960831,01914960804,Email,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+15,15,Harita,Chauhan,Finance Director,dhareesha@ram.org,07735990707,2871896374,Phone,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+16,16,Elizabeth,Hill,Owner,pagestewart@scott.org,+441632 960521,(0808) 157 0194,Email,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+17,17,Alexandra,Thorpe,Managing Director,elainethorpe@gardiner.info,+441914960474,029 2018103,Email,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+18,18,Rhys,Harper,Owner,shaunpayne@turner-coleman.com,(028)9018450,(01632)960986,Phone,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+19,19,Hemal,Thakkar,Operations Manager,aryan79@kala.biz,1992528790,+917440089592,Phone,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+20,20,Dennis,Kerr,Managing Director,bethany54@taylor.org,(0115) 4960363,+44(0)808 157 0102,Phone,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+21,21,George,Singh,Managing Director,roger41@payne-fraser.co.uk,+44131 4960325,08081570313,Email,True,Active,2026-06-18 12:00:51.469700,2026-06-18 12:00:51.469700
+22,22,Molly,Mason,Finance Director,zoemiller@lee-obrien.com,028 9018190,+44(0)1632 960 616,Email,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+23,23,Christian,Wall,Operations Manager,nicholasmorgan@taylor.info,+44(0)131 4960650,(0141) 4960924,Phone,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+24,24,Ekavir,Banik,Finance Director,urishilla34@sangha.com,00698759190,+914481443088,Email,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+25,25,Zarna,Mital,Owner,munshikalpit@sengupta.com,06053437920,07119804007,Email,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+26,26,Charles,Parker,Managing Director,pearsongary@stone.com,+449098790406,0909 879 0176,Phone,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+27,27,Zaitra,Dhillon,Owner,rattanishaan@bhat-agarwal.net,03523243872,+917750359238,Email,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+28,28,Nisha,Purohit,CEO,poojapradhan@manda-mane.com,6451625028,03603832661,Phone,False,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+29,29,Vasudha,Sane,Operations Manager,wnadkarni@modi-mukhopadhyay.com,+918418278971,+919510734632,Email,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
+30,30,Osha,Kota,CEO,gaurangi21@konda-raju.com,5659290180,+915766763548,Email,True,Active,2026-06-18 12:00:51.470690,2026-06-18 12:00:51.470690
