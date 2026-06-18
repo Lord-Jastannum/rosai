@@ -1,13 +1,9 @@
-"""
-Generate Orders
-"""
-
 import random
 from datetime import datetime, timedelta
 
 import pandas as pd
 
-from src.utils.helpers import load_csv, save_csv
+from src.utils.helpers import load_csv, append_csv
 
 random.seed(42)
 
@@ -15,27 +11,20 @@ restaurants = load_csv("restaurants.csv")
 customers = load_csv("customers.csv")
 users = load_csv("users.csv")
 
-orders = []
+START_DATE = datetime(2025, 1, 1)
+DAYS = 30
+CHUNK_SIZE = 5000
 
 order_id = 1
+buffer = []
 
-order_types = [
-    ("Dine In", 0.50),
-    ("Takeaway", 0.25),
-    ("Delivery", 0.25),
-]
+for day in range(DAYS):
 
-payment_status = ["Paid", "Paid", "Paid", "Pending"]
-
-start_date = datetime(2024, 1, 1)
-
-days = 365
-
-for day in range(days):
-
-    current_date = start_date + timedelta(days=day)
+    current_date = START_DATE + timedelta(days=day)
 
     weekend = current_date.weekday() >= 5
+
+    print(f"Day {day+1}/{DAYS}")
 
     for _, restaurant in restaurants.iterrows():
 
@@ -51,9 +40,9 @@ for day in range(days):
             continue
 
         orders_today = (
-            random.randint(180, 300)
+            random.randint(60, 100)
             if weekend
-            else random.randint(120, 220)
+            else random.randint(30, 60)
         )
 
         for _ in range(orders_today):
@@ -61,39 +50,83 @@ for day in range(days):
             customer = restaurant_customers.sample(1).iloc[0]
             employee = restaurant_users.sample(1).iloc[0]
 
-            order_time = current_date + timedelta(
-                minutes=random.randint(540, 1320)
+            hour = random.choices(
+                [9,10,11,12,13,14,18,19,20,21],
+                weights=[2,3,4,9,10,7,10,12,8,5]
+            )[0]
+
+            minute = random.randint(0,59)
+
+            order_time = current_date.replace(
+                hour=hour,
+                minute=minute
+            )
+
+            subtotal = round(random.uniform(15,120),2)
+
+            discount = round(
+                subtotal * random.choice([0,0,0.05,0.10]),
+                2
+            )
+
+            tax = round((subtotal-discount)*0.05,2)
+
+            total = round(
+                subtotal-discount+tax,
+                2
             )
 
             order_type = random.choices(
-                [o[0] for o in order_types],
-                weights=[o[1] for o in order_types],
+                ["Dine In","Takeaway","Delivery"],
+                weights=[55,20,25]
             )[0]
 
-            orders.append({
+            buffer.append({
 
-                "id": order_id,
+                "id":order_id,
 
-                "restaurant_id": restaurant["id"],
+                "restaurant_id":restaurant["id"],
 
-                "customer_id": customer["id"],
+                "customer_id":customer["id"],
 
-                "user_id": employee["id"],
+                "user_id":employee["id"],
 
-                "order_datetime": order_time,
+                "order_datetime":order_time,
 
-                "order_type": order_type,
+                "order_type":order_type,
 
-                "payment_status": random.choice(payment_status),
+                "subtotal":subtotal,
 
-                "status": "Completed"
+                "discount":discount,
+
+                "tax":tax,
+
+                "total_amount":total,
+
+                "payment_status":"Paid",
+
+                "status":"Completed"
 
             })
 
             order_id += 1
 
-df = pd.DataFrame(orders)
+            if len(buffer) >= CHUNK_SIZE:
 
-save_csv(df, "orders.csv")
+                append_csv(
+                    pd.DataFrame(buffer),
+                    "orders.csv"
+                )
 
-print(f"Generated {len(df)} orders.")
+                print(f"Saved {order_id-1} orders")
+
+                buffer.clear()
+
+if buffer:
+
+    append_csv(
+        pd.DataFrame(buffer),
+        "orders.csv"
+    )
+
+print(f"Finished. Total Orders : {order_id-1}")
